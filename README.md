@@ -5,13 +5,19 @@
 A distributed swarm trajectory optimization framework for formation flight in dense obstacle environments. Drones fly in formation while autonomously avoiding obstacles — each drone plans independently with no central controller.
 
 <p align="center">
-  <img src="media/hexagon.gif" width="32%" alt="Hexagon Formation"/>
-  <img src="media/star.gif" width="32%" alt="Star Formation"/>
-  <img src="media/arrow.gif" width="32%" alt="Arrow Formation"/>
+  <img src="media/hexagon.gif" width="80%" alt="Hexagon Formation"/>
 </p>
+<p align="center"><em>Hexagon Formation (7 drones)</em></p>
+
 <p align="center">
-  <em>Hexagon (7 drones) &nbsp;|&nbsp; Star (10 drones) &nbsp;|&nbsp; Arrow (10 drones)</em>
+  <img src="media/star.gif" width="80%" alt="Star Formation"/>
 </p>
+<p align="center"><em>Star Formation (10 drones)</em></p>
+
+<p align="center">
+  <img src="media/arrow.gif" width="80%" alt="Arrow Formation"/>
+</p>
+<p align="center"><em>Arrow Formation (10 drones)</em></p>
 
 ## Credits
 
