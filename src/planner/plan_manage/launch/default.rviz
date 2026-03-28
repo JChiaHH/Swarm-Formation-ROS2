@@ -1,0 +1,3059 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /drone_01
+        - /drone_01/Planning1
+        - /drone_11
+        - /drone_11/Planning1
+        - /drone_21
+        - /drone_21/Planning1
+        - /drone_31
+        - /drone_31/Planning1
+        - /drone_41
+        - /drone_41/Planning1
+        - /drone_51
+        - /drone_51/Planning1
+        - /drone_61
+        - /drone_61/Planning1
+      Splitter Ratio: 0.5
+    Tree Height: 464
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 1000
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 0.15
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 2.9
+        Min Value: 0
+        Value: false
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 198; 198; 198
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: simulation_map
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.10000000149011612
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /map_generator/global_cloud
+      Use Fixed Frame: true
+      Use rainbow: false
+      Value: true
+    # ============ drone_0 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 29; 108; 212
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.84
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 29; 108; 212
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_0_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_0
+    # ============ drone_1 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 255; 170; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 255; 170; 0
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_1_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_1
+    # ============ drone_2 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 170; 170; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 170; 170; 0
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_2_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_2
+    # ============ drone_3 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 170; 0; 255
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 170; 0; 255
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_3_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_3
+    # ============ drone_4 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 0; 170; 0
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 0; 170; 0
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_4_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_4
+    # ============ drone_5 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 51; 236; 195
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 255; 0; 0
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_5_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_5
+    # ============ drone_6 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: goal_point
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/goal_point
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: global_path
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/global_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/optimal_list
+              Value: true
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: AStar
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/a_star_list
+              Value: false
+            - Class: rviz_default_plugins/Marker
+              Enabled: false
+              Name: InitTraj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/init_list
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 226; 182; 182
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.30000001192092896
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.029999999329447746
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 2.34
+                Min Value: 0.04
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz_default_plugins/PointCloud2
+              Color: 190; 120; 121
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: map inflate
+              Position Transformer: XYZ
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.10000000149011612
+              Style: Flat Squares
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_ego_planner_node/grid_map/occupancy_inflate
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: true
+          Name: Mapping
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_6_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_6
+    # ============ drone_7 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_7_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 100; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_7_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_7_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_7
+    # ============ drone_8 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_8_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 200; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_8_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_8_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_8
+    # ============ drone_9 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_9_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 100; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_9_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_9_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_9
+    # ============ drone_10 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_10_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 100; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_10_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_10_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_10
+    # ============ drone_11 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_11_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 200; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_11_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_11_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_11
+    # ============ drone_12 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_12_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 50; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_12_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_12_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_12
+    # ============ drone_13 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_13_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 200; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_13_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_13_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_13
+    # ============ drone_14 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_14_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 200; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_14_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_14_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_14
+    # ============ drone_15 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_15_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 50; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_15_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_15_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_15
+    # ============ drone_16 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_16_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 150; 100; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_16_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_16_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_16
+    # ============ drone_17 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_17_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 150; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_17_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_17_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_17
+    # ============ drone_18 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_18_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 50; 150
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_18_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_18_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_18
+    # ============ drone_19 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_19_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 150; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_19_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_19_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_19
+    # ============ drone_20 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_20_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 200; 150
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_20_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_20_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_20
+    # ============ drone_21 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_21_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 150; 50; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_21_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_21_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_21
+    # ============ drone_22 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_22_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 200; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_22_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_22_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_22
+    # ============ drone_23 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_23_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 100; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_23_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_23_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_23
+    # ============ drone_24 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_24_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 50; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_24_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_24_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_24
+    # ============ drone_25 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_25_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 150; 200; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_25_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_25_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_25
+    # ============ drone_26 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_26_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 150; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_26_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_26_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_26
+    # ============ drone_27 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_27_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 50; 150
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_27_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_27_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_27
+    # ============ drone_28 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_28_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 150; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_28_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_28_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_28
+    # ============ drone_29 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_29_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 100; 150
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_29_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_29_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_29
+    # ============ drone_30 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_30_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 150; 50; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_30_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_30_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_30
+    # ============ drone_31 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_31_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 100; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_31_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_31_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_31
+    # ============ drone_32 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_32_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 200; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_32_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_32_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_32
+    # ============ drone_33 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_33_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 100; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_33_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_33_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_33
+    # ============ drone_34 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_34_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 200; 100
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_34_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_34_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_34
+    # ============ drone_35 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_35_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 100; 200; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_35_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_35_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_35
+    # ============ drone_36 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_36_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 200; 100; 200
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_36_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_36_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_36
+    # ============ drone_37 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_37_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 150; 150; 50
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_37_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_37_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_37
+    # ============ drone_38 ============
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: optimal_traj
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_38_ego_planner_node/optimal_list
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz_default_plugins/Path
+              Color: 50; 150; 150
+              Enabled: true
+              Line Style: Billboards
+              Line Width: 0.10000000149011612
+              Name: drone_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Style: None
+              Topic:
+                Depth: 5
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_38_odom_visualization/path
+              Value: true
+          Enabled: true
+          Name: Planning
+        - Class: rviz_common/Group
+          Displays:
+            - Class: rviz_default_plugins/Marker
+              Enabled: true
+              Name: robot
+              Namespaces:
+                {}
+              Topic:
+                Depth: 100
+                Durability Policy: Volatile
+                History Policy: Keep Last
+                Reliability Policy: Reliable
+                Value: /drone_38_odom_visualization/robot
+              Value: true
+          Enabled: true
+          Name: Simulation
+      Enabled: true
+      Name: drone_38
+    # ============ Swarm Graph ============
+    - Class: rviz_default_plugins/MarkerArray
+      Enabled: true
+      Name: swarm_graph
+      Namespaces:
+        {}
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /drone_0_ego_planner_node/swarm_graph_visual
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 255; 255; 255
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 80
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.0
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 4.7
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 900
+  Hide Left Dock: false
+  Hide Right Dock: false
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1400
+  X: 60
+  Y: 60

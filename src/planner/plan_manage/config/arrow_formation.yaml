@@ -1,0 +1,54 @@
+# 10-drone arrow/V-formation pointing in +x direction
+# 1 tip + 4 left wing + 4 right wing + 1 tail
+"/**":
+  ros__parameters:
+    "global_goal/swarm_scale": 1.5
+    # Arrow V-formation: wider wing spacing, shorter tip-to-tail, offset tail
+    # Min inter-drone distance ~1.1 at unit scale = 2.2m at swarm_scale=2.0
+    "global_goal/relative_pos_0/x": 1.5
+    "global_goal/relative_pos_0/y": 0.0
+    "global_goal/relative_pos_0/z": 0.0
+    "global_goal/relative_pos_1/x": 0.75
+    "global_goal/relative_pos_1/y": 0.6
+    "global_goal/relative_pos_1/z": 0.0
+    "global_goal/relative_pos_2/x": 0.0
+    "global_goal/relative_pos_2/y": 1.2
+    "global_goal/relative_pos_2/z": 0.0
+    "global_goal/relative_pos_3/x": -0.75
+    "global_goal/relative_pos_3/y": 1.8
+    "global_goal/relative_pos_3/z": 0.0
+    "global_goal/relative_pos_4/x": -1.5
+    "global_goal/relative_pos_4/y": 2.4
+    "global_goal/relative_pos_4/z": 0.0
+    "global_goal/relative_pos_5/x": 0.75
+    "global_goal/relative_pos_5/y": -0.6
+    "global_goal/relative_pos_5/z": 0.0
+    "global_goal/relative_pos_6/x": 0.0
+    "global_goal/relative_pos_6/y": -1.2
+    "global_goal/relative_pos_6/z": 0.0
+    "global_goal/relative_pos_7/x": -0.75
+    "global_goal/relative_pos_7/y": -1.8
+    "global_goal/relative_pos_7/z": 0.0
+    "global_goal/relative_pos_8/x": -1.5
+    "global_goal/relative_pos_8/y": -2.4
+    "global_goal/relative_pos_8/z": 0.0
+    "global_goal/relative_pos_9/x": -1.5
+    "global_goal/relative_pos_9/y": 0.0
+    "global_goal/relative_pos_9/z": 0.0
+
+    "optimization/formation_type": 3
+    "optimization/weight_obstacle": 50000.0
+    "optimization/weight_swarm": 50000.0
+    "optimization/weight_feasibility": 10000.0
+    "optimization/weight_sqrvariance": 10000.0
+    "optimization/weight_time": 80.0
+    "optimization/weight_formation": 50000.0
+    "optimization/obstacle_clearance": 0.6
+    "optimization/swarm_clearance": 0.5
+    "optimization/max_vel": 0.3
+    "optimization/max_acc": 2.0
+
+    "manager/max_vel": 0.3
+    "manager/max_acc": 2.0
+
+    "fsm/replan_trajectory_time": 0.05

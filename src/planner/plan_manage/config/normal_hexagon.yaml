@@ -1,0 +1,38 @@
+# Hexagon formation yaml - ROS2 flat parameter format
+"/**":
+  ros__parameters:
+    # global goal setting
+    "global_goal/swarm_scale": 2.0
+    "global_goal/relative_pos_0/x": 0.0
+    "global_goal/relative_pos_0/y": 0.0
+    "global_goal/relative_pos_0/z": 0.0
+    "global_goal/relative_pos_1/x": 1.7321
+    "global_goal/relative_pos_1/y": -1.0
+    "global_goal/relative_pos_1/z": 0.0
+    "global_goal/relative_pos_2/x": 0.0
+    "global_goal/relative_pos_2/y": -2.0
+    "global_goal/relative_pos_2/z": 0.0
+    "global_goal/relative_pos_3/x": -1.7321
+    "global_goal/relative_pos_3/y": -1.0
+    "global_goal/relative_pos_3/z": 0.0
+    "global_goal/relative_pos_4/x": -1.7321
+    "global_goal/relative_pos_4/y": 1.0
+    "global_goal/relative_pos_4/z": 0.0
+    "global_goal/relative_pos_5/x": 0.0
+    "global_goal/relative_pos_5/y": 2.0
+    "global_goal/relative_pos_5/z": 0.0
+    "global_goal/relative_pos_6/x": 1.7321
+    "global_goal/relative_pos_6/y": 1.0
+    "global_goal/relative_pos_6/z": 0.0
+
+    "optimization/formation_type": 1
+    "optimization/weight_obstacle": 50000.0
+    "optimization/weight_swarm": 50000.0
+    "optimization/weight_feasibility": 10000.0
+    "optimization/weight_sqrvariance": 10000.0
+    "optimization/weight_time": 80.0
+    "optimization/weight_formation": 25000.0
+    "optimization/obstacle_clearance": 0.5
+    "optimization/swarm_clearance": 0.5
+
+    "fsm/replan_trajectory_time": 0.1

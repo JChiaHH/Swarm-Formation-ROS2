@@ -1,0 +1,28 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Conda
+*.conda
+*.tar.bz2
+
+# Claude Code
+CLAUDE.md

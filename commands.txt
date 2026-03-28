@@ -1,0 +1,156 @@
+=====================================
+ Swarm-Formation ROS2 Jazzy Commands
+=====================================
+
+============================
+ ONE-TIME SETUP (run once)
+============================
+
+# 1. Go to the workspace
+cd ~/Swarm-Formation-ROS2
+
+# 2. Run the setup script (creates conda env, installs ROS2 + deps, builds)
+./setup_conda_env.sh
+
+# If setup script fails partway, you can do steps manually:
+#   conda activate swarm_ros2
+#   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+
+============================
+ EVERY TERMINAL (required)
+============================
+
+# Activate the environment in EVERY new terminal you open
+source ~/Swarm-Formation-ROS2/activate.sh
+
+
+============================
+ REBUILDING (after edits)
+============================
+
+# Rebuild everything
+cd ~/Swarm-Formation-ROS2
+source activate.sh
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+# Or rebuild specific packages
+colcon build --packages-select swarm_graph traj_utils traj_opt ego_planner --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+# Re-source after rebuilding
+source install/setup.bash
+
+
+========================================
+ HEXAGON FORMATION (7 drones)
+========================================
+
+# Terminal 1: Launch simulation
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner normal_hexagon_launch.py
+
+# Terminal 2: Launch RViz2
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner rviz_launch.py
+
+# Terminal 3: Send goal (wait for all 7 drones to show "WAIT_TARGET" first)
+source ~/Swarm-Formation-ROS2/activate.sh
+./scripts/send_goal.sh 25 0 1 7
+
+
+========================================
+ STAR FORMATION (10 drones)
+========================================
+
+# Terminal 1: Launch simulation
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner star_launch.py
+
+# Terminal 2: Launch RViz2
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner rviz_launch.py
+
+# Terminal 3: Send goal (wait for all 10 drones to show "WAIT_TARGET" first)
+source ~/Swarm-Formation-ROS2/activate.sh
+./scripts/send_goal.sh 25 0 1 10
+
+
+========================================
+ ARROW FORMATION (10 drones)
+========================================
+
+# Terminal 1: Launch simulation
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner arrow_launch.py
+
+# Terminal 2: Launch RViz2
+source ~/Swarm-Formation-ROS2/activate.sh
+ros2 launch ego_planner rviz_launch.py
+
+# Terminal 3: Send goal (wait for all 10 drones to show "WAIT_TARGET" first)
+source ~/Swarm-Formation-ROS2/activate.sh
+./scripts/send_goal.sh 25 0 1 10
+
+
+========================================
+ SUTD FORMATION (30 drones)
+========================================
+
+# IMPORTANT: Must disable FastDDS shared memory for 30+ drones
+# Set this in ALL terminals before launching:
+export FASTRTPS_DEFAULT_PROFILES_FILE=/home/jeremychia/fastdds_no_shm.xml
+
+# Terminal 1: Launch simulation (takes 2-5 min for all 30 drones to start)
+source ~/Swarm-Formation-ROS2/activate.sh
+export FASTRTPS_DEFAULT_PROFILES_FILE=/home/jeremychia/fastdds_no_shm.xml
+ros2 launch ego_planner sutd_launch.py
+
+# Terminal 2: Launch RViz2
+source ~/Swarm-Formation-ROS2/activate.sh
+export FASTRTPS_DEFAULT_PROFILES_FILE=/home/jeremychia/fastdds_no_shm.xml
+ros2 launch ego_planner rviz_launch.py
+
+# Terminal 3: Send goal (WAIT for ALL 30 drones to show "WAIT_TARGET" first!)
+# This may take 3-5 minutes. The -w 30 flag waits for all subscribers.
+source ~/Swarm-Formation-ROS2/activate.sh
+export FASTRTPS_DEFAULT_PROFILES_FILE=/home/jeremychia/fastdds_no_shm.xml
+./scripts/send_goal.sh 25 0 1 30
+
+
+========================================
+ DYNAMIC FORMATION CHANGE (optional)
+========================================
+
+# While drones are flying in star formation, switch to arrow:
+./scripts/change_formation.sh 3
+
+# Switch to arrow with a new goal:
+./scripts/change_formation.sh 3 25 0 1
+
+# Switch back to star:
+./scripts/change_formation.sh 2
+
+# Formation type IDs:
+#   1 = Hexagon (7 drones)
+#   2 = Star (10 drones)
+#   3 = Arrow (10 drones)
+#   4 = SUTD (30 drones)
+
+
+========================================
+ TIPS
+========================================
+
+# Use top-down view in RViz to see formations clearly:
+#   Views panel → Type → TopDownOrtho
+
+# Kill all running nodes:
+#   Ctrl+C in each terminal
+
+# Check if drones are subscribed to goal topic:
+#   ros2 topic info /goal_pose
+
+# Monitor formation cost (look for [FORMATION_DBG] lines):
+#   Formation cost ~0 = perfect shape
+#   Formation cost ~1000-5000 = acceptable deformation
+#   Formation cost ~50000+ = formation not converging

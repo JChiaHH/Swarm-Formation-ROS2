@@ -1,0 +1,113 @@
+# 29-drone SUTD text formation (compact font)
+# S(6) + U(9) + T(6) + D(8) = 29 drones
+# 2-3 wide x 4 tall per letter, swarm_scale 1.5
+"/**":
+  ros__parameters:
+    "global_goal/swarm_scale": 1.5
+    # S (drones 0-5)
+    "global_goal/relative_pos_0/x": -6.2414
+    "global_goal/relative_pos_0/y": 1.4138
+    "global_goal/relative_pos_0/z": 0.0
+    "global_goal/relative_pos_1/x": -5.2414
+    "global_goal/relative_pos_1/y": 1.4138
+    "global_goal/relative_pos_1/z": 0.0
+    "global_goal/relative_pos_2/x": -6.2414
+    "global_goal/relative_pos_2/y": 0.4138
+    "global_goal/relative_pos_2/z": 0.0
+    "global_goal/relative_pos_3/x": -6.2414
+    "global_goal/relative_pos_3/y": -0.5862
+    "global_goal/relative_pos_3/z": 0.0
+    "global_goal/relative_pos_4/x": -5.2414
+    "global_goal/relative_pos_4/y": -0.5862
+    "global_goal/relative_pos_4/z": 0.0
+    "global_goal/relative_pos_5/x": -5.2414
+    "global_goal/relative_pos_5/y": -1.5862
+    "global_goal/relative_pos_5/z": 0.0
+    # U (drones 6-14)
+    "global_goal/relative_pos_6/x": -3.2414
+    "global_goal/relative_pos_6/y": 1.4138
+    "global_goal/relative_pos_6/z": 0.0
+    "global_goal/relative_pos_7/x": -1.2414
+    "global_goal/relative_pos_7/y": 1.4138
+    "global_goal/relative_pos_7/z": 0.0
+    "global_goal/relative_pos_8/x": -3.2414
+    "global_goal/relative_pos_8/y": 0.4138
+    "global_goal/relative_pos_8/z": 0.0
+    "global_goal/relative_pos_9/x": -1.2414
+    "global_goal/relative_pos_9/y": 0.4138
+    "global_goal/relative_pos_9/z": 0.0
+    "global_goal/relative_pos_10/x": -3.2414
+    "global_goal/relative_pos_10/y": -0.5862
+    "global_goal/relative_pos_10/z": 0.0
+    "global_goal/relative_pos_11/x": -1.2414
+    "global_goal/relative_pos_11/y": -0.5862
+    "global_goal/relative_pos_11/z": 0.0
+    "global_goal/relative_pos_12/x": -3.2414
+    "global_goal/relative_pos_12/y": -1.5862
+    "global_goal/relative_pos_12/z": 0.0
+    "global_goal/relative_pos_13/x": -2.2414
+    "global_goal/relative_pos_13/y": -1.5862
+    "global_goal/relative_pos_13/z": 0.0
+    "global_goal/relative_pos_14/x": -1.2414
+    "global_goal/relative_pos_14/y": -1.5862
+    "global_goal/relative_pos_14/z": 0.0
+    # T (drones 15-20)
+    "global_goal/relative_pos_15/x": 0.7586
+    "global_goal/relative_pos_15/y": 1.4138
+    "global_goal/relative_pos_15/z": 0.0
+    "global_goal/relative_pos_16/x": 1.7586
+    "global_goal/relative_pos_16/y": 1.4138
+    "global_goal/relative_pos_16/z": 0.0
+    "global_goal/relative_pos_17/x": 2.7586
+    "global_goal/relative_pos_17/y": 1.4138
+    "global_goal/relative_pos_17/z": 0.0
+    "global_goal/relative_pos_18/x": 1.7586
+    "global_goal/relative_pos_18/y": 0.4138
+    "global_goal/relative_pos_18/z": 0.0
+    "global_goal/relative_pos_19/x": 1.7586
+    "global_goal/relative_pos_19/y": -0.5862
+    "global_goal/relative_pos_19/z": 0.0
+    "global_goal/relative_pos_20/x": 1.7586
+    "global_goal/relative_pos_20/y": -1.5862
+    "global_goal/relative_pos_20/z": 0.0
+    # D (drones 21-28)
+    "global_goal/relative_pos_21/x": 4.7586
+    "global_goal/relative_pos_21/y": 1.4138
+    "global_goal/relative_pos_21/z": 0.0
+    "global_goal/relative_pos_22/x": 5.7586
+    "global_goal/relative_pos_22/y": 1.4138
+    "global_goal/relative_pos_22/z": 0.0
+    "global_goal/relative_pos_23/x": 4.7586
+    "global_goal/relative_pos_23/y": 0.4138
+    "global_goal/relative_pos_23/z": 0.0
+    "global_goal/relative_pos_24/x": 6.7586
+    "global_goal/relative_pos_24/y": 0.4138
+    "global_goal/relative_pos_24/z": 0.0
+    "global_goal/relative_pos_25/x": 4.7586
+    "global_goal/relative_pos_25/y": -0.5862
+    "global_goal/relative_pos_25/z": 0.0
+    "global_goal/relative_pos_26/x": 6.7586
+    "global_goal/relative_pos_26/y": -0.5862
+    "global_goal/relative_pos_26/z": 0.0
+    "global_goal/relative_pos_27/x": 4.7586
+    "global_goal/relative_pos_27/y": -1.5862
+    "global_goal/relative_pos_27/z": 0.0
+    "global_goal/relative_pos_28/x": 5.7586
+    "global_goal/relative_pos_28/y": -1.5862
+    "global_goal/relative_pos_28/z": 0.0
+    # Extra S bottom-left (drone 29)
+    "global_goal/relative_pos_29/x": -6.2414
+    "global_goal/relative_pos_29/y": -1.5862
+    "global_goal/relative_pos_29/z": 0.0
+
+    "optimization/formation_type": 4
+    "optimization/weight_obstacle": 50000.0
+    "optimization/weight_swarm": 50000.0
+    "optimization/weight_feasibility": 10000.0
+    "optimization/weight_sqrvariance": 10000.0
+    "optimization/weight_time": 80.0
+    "optimization/weight_formation": 25000.0
+    "optimization/obstacle_clearance": 0.6
+    "optimization/swarm_clearance": 0.5
+
+    "fsm/replan_trajectory_time": 0.05
